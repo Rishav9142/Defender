@@ -60,4 +60,60 @@ plt.ylabel('sin(x)')
 plt.show()
 
 
+Now, we will learn how to create a Notebook
+  we know how to start a Notebook server, we should probably learn how to create an actual Notebook document
+All we need to do is click on the New button (upper right), and it will open up a list of choices. On my machine, I happen to have Python 2 and Python 3 installed, so I can create a Notebook that uses either of these. For simplicity’s sake, let’s choose Python 3.
+*Naming
+we will notice that at the top of the page is the word Untitled. This is the title for the page and the name of our Notebook. Since that isn’t a very descriptive name, let’s change it!
+Just move our mouse over the word Untitled and click on the text. we should now see an in-browser dialog titled Rename Notebook.
+
+*Running Cells
+
+A Notebook’s cell defaults to using code whenever we first create one, and that cell uses the kernel that we chose when we started your Notebook.
+In this case, we started ours with Python 3 as our kernel, so that means we can write Python code in our code cells. Since our initial Notebook has only one empty cell in it, the Notebook can’t really do anything.
+Thus, to verify that everything is working as it should, we can add some Python code to the cell and try running its contents.
+
+Let’s try adding the following code to that cell:
+print('Hello Jupyter!')
+Running a cell means that we will execute the cell’s contents.
+ To execute a cell, we can just select the cell and click the Run button that is in the row of buttons along the top. It’s towards the middle. If we prefer using our keyboard, we can just press Shift+Enter.
+If we have multiple cells in our Notebook, and we run the cells in order, you can share your variables and imports across cells. This makes it easy to separate out your code into logical chunks without needing to reimport libraries or recreate variables or functions in every cell.
+
+When you run a cell, you will notice that there are some square braces next to the word In to the left of the cell. The square braces will auto fill with a number that indicates the order that you ran the cells. For example, if you open a fresh Notebook and run the first cell at the top of the Notebook, the square braces will fill with the number 1.
+
+*Starting Terminals and Other Things
+
+Jupyter Notebook also allows you to start more than just Notebooks. You can also create a text file, a folder, or a Terminal in your browser. Go back to the home page that opened when you first started the Jupyter server at http://localhost:8888/tree. Go to the New button and choose one of the other options.
+
+The Terminal is probably the most interesting of the bunch, as it is running your operating systems terminal in the browser. This allows you to run bash, Powershell, and so on in your browser and run any shell command that you might need to there.
+Viewing What’s Running
+Also on the home page of your Jupyter server (http://localhost:8888/tree) are two other tabs: Running and Clusters.
+
+The Running tab will tell you which Notebooks and Terminals you are currently running. This is useful for when you want to shut down your server but you need to make sure that you have saved all your data. Fortunately, Notebooks auto-save pretty frequently, so you rarely lose data. But it’s good to be able to see what’s running when you need to.
+
+The other nice thing about this tab is that you can go through your running applications and shut them down there.
+
+
+To create a Jupyter Notebook using code, you can use the nbformat library to programmatically generate the notebook content. Here's a simple example of how you can create a Jupyter Notebook with a code cell using Python:
+
+import nbformat
+
+# Create a new Jupyter Notebook
+notebook = nbformat.v4.new_notebook()
+
+# Add a code cell to the notebook
+code_cell = nbformat.v4.new_code_cell(
+    source='print("Hello, Jupyter!")'
+)
+
+# Append the code cell to the notebook cells
+notebook.cells.append(code_cell)
+
+# Save the notebook to a file
+file_path = 'hello_jupyter.ipynb'
+with open(file_path, 'w') as file:
+    nbformat.write(notebook, file)
+
+print(f"Jupyter Notebook '{file_path}' created successfully.")
+
 
