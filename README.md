@@ -3,7 +3,7 @@ Welcome, to this Dynamic Project Where We are going to discuss on the Topic Jupy
 Jupyter Notebooks are an open-source, interactive web application that allows you to create and share documents containing live code, equations, visualisations and narrative text.The name "Jupyter" is derived from the three core programming languages it supports: Julia, Python, and R. However, Jupyter notebooks can also be used with other languages.
 Here are some key features and concepts related to Jupyter notebooks:
 
-* Notebook Interface: The Jupyter notebook interface is a web-based application that allows you to create and work with notebooks. It provides a cell-based structure where each cell can contain code, markdown text, or rich media.
+* Notebook Interface: The Jupyter notebook interface is a web-based application that allows us to create and work with notebooks. It provides a cell-based structure where each cell can contain code, markdown text, or rich media.
 
 * Cells: The basic building blocks of a Jupyter notebook are cells. There are two main types of cells:
 
